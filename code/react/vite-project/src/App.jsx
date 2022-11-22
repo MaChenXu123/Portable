@@ -3,6 +3,7 @@ import React from "react";
 class App extends React.Component{
 
     constructor(props){
+        console.log(props.name)
         super(props)
         this.state={
             a:[1,2,3]
@@ -14,7 +15,7 @@ class App extends React.Component{
                 
                 {this.state.a.map((value,index)=>{
                     return <div key={index}>
-                        {value}
+                        {value}{this.props.name}
                      </div>
                 })}
 
