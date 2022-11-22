@@ -1,9 +1,16 @@
 import React from "react";
 
 class App extends React.Component{
-
+    putty(a,b){
+        console.log(this)
+        console.log(a)
+        console.log(b)
+    }
+    java=()=>{
+        console.log(this)
+    }
     constructor(props){
-        console.log(props.name)
+
         super(props)
         this.state={
             a:[1,2,3]
@@ -18,8 +25,10 @@ class App extends React.Component{
                         {value}{this.props.name}
                      </div>
                 })}
-
-                <button onClick={()=>{
+                <button   onClick={()=>{
+                    this.putty(1)
+                    this.java()
+                    console.log(this)
                     const x=this.state.a.length+1
                     let  num=[...this.state.a,x]
                     this.setState({
